@@ -1,0 +1,189 @@
+---
+import logoheader from "../assets/logos/gobiernoformosa.png";
+import logoepica from "../assets/logos/logoFondoOscuro.png";
+---
+
+<main
+    class="h-screen flex flex-col items-center justify-between bg-custom-gradient"
+>
+    <!-- Logos superiores -->
+    <div class="w-full flex justify-center items-center px-8 pt-6">
+        <img src={logoheader.src} alt="Todos Unidos" class="h-16" />
+    </div>
+
+    <!-- Contenido central -->
+    <div class="text-center">
+        <div class="flex items-center justify-center space-x-4">
+            <div>
+                <!-- Ícono o ilustración del cuadrado morado -->
+                <img src={logoepica.src} alt="Icono Morado" width="700px" />
+            </div>
+        </div>
+
+        <!-- Texto animado -->
+        <div
+            class="mt-4 text-2xl text-black text-left pl-24 flex items-start space-x-2"
+        >
+            <div class="content">
+                <div class="visible">
+                    <p>Hello</p>
+                    <ul>
+                        <li>world !</li>
+                        <li>Bob !</li>
+                        <li>users !</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer o elementos inferiores -->
+    <div class="pb-6">
+        <!-- Deja este espacio para otros elementos o decoraciones -->
+    </div>
+</main>
+
+<style>
+    .content {
+        width: 237px;
+        font-size: 36px;
+        line-height: 40px;
+        font-family: "Muli";
+        color: #ecf0f1;
+        height: 40px;
+        position: absolute;
+
+        &:before {
+            content: "<";
+            position: absolute;
+            left: -30px;
+            line-height: 40px;
+        }
+        &:after {
+            content: "/>";
+            position: absolute;
+            right: -30px;
+            line-height: 40px;
+        }
+        &:after,
+        &:before {
+            color: #16a085;
+            font-size: 42px;
+            animation: 2s linear 0s normal none infinite opacity;
+            -webkit-animation: 2s ease-out 0s normal none infinite opacity;
+            -moz-animation: 2s ease-out 0s normal none infinite opacity;
+            -o-animation: 2s ease-out 0s normal none infinite opacity;
+        }
+    }
+
+    .visible {
+        float: left;
+        font-weight: 600;
+        overflow: hidden;
+        height: 40px;
+    }
+
+    p {
+        display: inline;
+        float: left;
+        margin: 0;
+    }
+
+    ul {
+        margin-top: 0;
+        padding-left: 110px;
+        text-align: left;
+        list-style: none;
+        animation: 6s linear 0s normal none infinite change;
+        -webkit-animation: 6s linear 0s normal none infinite change;
+        -moz-animation: 6s linear 0s normal none infinite change;
+        -o-animation: 6s linear 0s normal none infinite change;
+    }
+
+    ul li {
+        line-height: 40px;
+        margin: 0;
+    }
+
+    @-webkit-keyframes opacity {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes change {
+        0% {
+            margin-top: 0;
+        }
+        15% {
+            margin-top: 0;
+        }
+        25% {
+            margin-top: -40px;
+        }
+        40% {
+            margin-top: -40px;
+        }
+        50% {
+            margin-top: -80px;
+        }
+        65% {
+            margin-top: -80px;
+        }
+        75% {
+            margin-top: -40px;
+        }
+        85% {
+            margin-top: -40px;
+        }
+        100% {
+            margin-top: 0;
+        }
+    }
+    @keyframes change {
+        0% {
+            margin-top: 0;
+        }
+        15% {
+            margin-top: 0;
+        }
+        25% {
+            margin-top: -40px;
+        }
+        40% {
+            margin-top: -40px;
+        }
+        50% {
+            margin-top: -80px;
+        }
+        65% {
+            margin-top: -80px;
+        }
+        75% {
+            margin-top: -40px;
+        }
+        85% {
+            margin-top: -40px;
+        }
+        100% {
+            margin-top: 0;
+        }
+    }
+</style>
